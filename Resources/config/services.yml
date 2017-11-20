@@ -1,0 +1,12 @@
+parameters:
+
+  by.resizer.class:     Bigyouth\BigyouthImageResizerBundle\Services\ImageResizeService
+
+services:
+
+  by.resizer:
+    class: "%by.resizer.class%"
+    calls:
+      - [ addService, [ cacheManager, "@liip_imagine.cache.manager" ] ]
+      - [ addService, [ dataManager, "@liip_imagine.data.manager" ] ]
+      - [ addService, [ filterManager, "@liip_imagine.filter.manager" ] ]

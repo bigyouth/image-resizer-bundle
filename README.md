@@ -1,0 +1,2 @@
+Installation Image Resizer Bundle
+-----------------

@@ -1,0 +1,27 @@
+{
+    "name": "bigyouth/image-resizer-bundle",
+    "license": "Bigyouth",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Alexis Smadja",
+            "email": "alexis.smadja@bigyouth.fr"
+        }
+    ],
+    "require": {
+        "php": "^5.3.9|^7.0",
+        "liip/imagine-bundle": "^1.8"
+    },
+    "autoload": {
+        "psr-0": {
+          "Bigyouth\\BigyouthImageResizerBundle": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "Bigyouth/BigyouthImageResizerBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
+}
