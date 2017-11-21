@@ -1,12 +1,25 @@
 parameters:
 
-  by.resizer.class:     Bigyouth\BigyouthImageResizerBundle\Services\ImageResizeService
+  # SERVICES
+  by.resizer.class:           Bigyouth\BigyouthImageResizerBundle\Services\ImageResizeService
+
+  # TWIG EXTENSIONS
+  by.resizer.extension.class: Bigyouth\BigyouthImageResizerBundle\Twig\Extension\ImageResizeExtension
 
 services:
 
+  # SERVICES
   by.resizer:
     class: "%by.resizer.class%"
     calls:
       - [ addService, [ cacheManager, "@liip_imagine.cache.manager" ] ]
       - [ addService, [ dataManager, "@liip_imagine.data.manager" ] ]
       - [ addService, [ filterManager, "@liip_imagine.filter.manager" ] ]
+
+  # TWIG EXTENSIONS
+  by.resizer.extension:
+    class: "%by.resizer.extension.class%"
+    public: false
+    arguments:  ["@service_container"]
+    tags:
+      - { name: twig.extension }
