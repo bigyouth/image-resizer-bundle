@@ -42,6 +42,14 @@ class ImageResizeExtension extends \Twig_Extension
      */
     public function resize($path, $width = null, $height = null, $filter = 'default')
     {
+
+        if($path[0] === '/') {
+            $path = substr($path, 1);
+        }
+
+        if(!$width || !$height) {
+        }
+
         return $this->container->get('router')->generateUrl('by_resize', [
             "path"   => $path,
             "filter" => $filter,
