@@ -2,6 +2,7 @@
 
 namespace Bigyouth\BigyouthImageResizerBundle\Twig\Extension;
 
+use Bigyouth\BigyouthImageResizerBundle\Helper\Helper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Form\FormView;
 
@@ -43,14 +44,23 @@ class ImageResizeExtension extends \Twig_Extension
     public function resize($path, $width = null, $height = null, $filter = 'default')
     {
 
-        if($path[0] === '/') {
+        if ($path[0] === '/') {
             $path = substr($path, 1);
         }
 
-        if(!$width || !$height) {
+        if (!$width || !$height) {
+            $size = getimagesize(Helper::getWebRootDir() . '/' . $path);
+
+            $width  = $size[0];
+            $height = $size[1];
+
+            if ($width > 1280) {
+                $height = ($height / $width) * 1280;
+                $width  = 1280;
+            }
         }
 
-        return $this->container->get('router')->generateUrl('by_resize', [
+        return $this->container->get('router')->generate('by_resize', [
             "path"   => $path,
             "filter" => $filter,
             "w"      => $width,
