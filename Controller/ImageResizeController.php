@@ -38,8 +38,9 @@ class ImageResizeController extends Controller
     {
         $width  = $request->query->getInt('w', null);
         $height = $request->query->getInt('h', null);
+        $scheme = $request->query->get('scheme');
 
-        $redirectUrl = $this->get('by.resizer')->resolvePath($path, $filter, $width, $height);
+        $redirectUrl = $this->get('by.resizer')->resolvePath($path, $filter, $width, $height, $scheme);
 
         if ($redirectUrl) {
             return new RedirectResponse($redirectUrl, Response::HTTP_MOVED_PERMANENTLY);
