@@ -4,42 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "18a046774a715e88c3830527296fc647",
+    "content-hash": "ed2b36f50ebe341bc9ce19111b887385",
     "packages": [
-        {
-            "name": "bigyouth/core-bundle",
-            "version": "0.0.1",
-            "target-dir": "Bigyouth/CoreBundle",
-            "source": {
-                "type": "git",
-                "url": "git@bigyouth.git.beanstalkapp.com:/bigyouth/by-core-bundle.git",
-                "reference": "8562425d8e9fea42c2f0c70ce4dda1d13d9b7377"
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "project",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "master"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Bigyouth\\CoreBundle": ""
-                }
-            },
-            "license": [
-                "Bigyouth"
-            ],
-            "authors": [
-                {
-                    "name": "Adrien Jerphagnon",
-                    "email": "adrien.jerphagnon@bigyouth.fr"
-                }
-            ],
-            "time": "2017-12-11T15:36:35+00:00"
-        },
         {
             "name": "imagine/imagine",
             "version": "dev-develop",

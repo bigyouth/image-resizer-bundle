@@ -10,15 +10,8 @@
     ],
     "require": {
         "php": "^5.3.9|^7.0",
-        "liip/imagine-bundle": "^1.8",
-        "bigyouth/core-bundle": "^0.0.1"
+        "liip/imagine-bundle": "^1.8"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@bigyouth.git.beanstalkapp.com:/bigyouth/by-core-bundle.git"
-        }
-    ],
     "autoload": {
         "psr-0": {
           "Bigyouth\\BigyouthImageResizerBundle": ""
