@@ -39,11 +39,11 @@ class ImageResizeExtension extends \Twig_Extension
      * @param null $width
      * @param null $height
      * @param string $filter
-     * @return null
+     * @param string $scheme
+     * @return mixed
      */
-    public function resize($path, $width = null, $height = null, $filter = 'default')
+    public function resize($path, $width = null, $height = null, $filter = 'default', $scheme = 'http')
     {
-
         if ($path[0] === '/') {
             $path = substr($path, 1);
         }
@@ -64,7 +64,8 @@ class ImageResizeExtension extends \Twig_Extension
             "path"   => $path,
             "filter" => $filter,
             "w"      => $width,
-            "h"      => $height
+            "h"      => $height,
+            "scheme" => $scheme
         ]);
     }
 

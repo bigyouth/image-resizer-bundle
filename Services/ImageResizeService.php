@@ -47,11 +47,12 @@ class ImageResizeService
     /**
      * @param string $path
      * @param string $filter
-     * @param $width
-     * @param $height
-     * @return null|string
+     * @param null $width
+     * @param null $height
+     * @param $scheme
+     * @return null
      */
-    public function resolvePath($path = '', $filter = 'default', $width = null, $height = null)
+    public function resolvePath($path = '', $filter = 'default', $width = null, $height = null, $scheme = 'http')
     {
         if (strpos($path, '/') === 0) {
             $path = substr($path, 1);
@@ -83,6 +84,12 @@ class ImageResizeService
             $this->cacheManager->store($filteredBinary, $width . '/' . $height . '/' . $path, $filter);
         }
 
-        return $this->cacheManager->resolve($width . '/' . $height . '/' . $path, $filter);
+        $url = $this->cacheManager->resolve($width . '/' . $height . '/' . $path, $filter);
+
+        if ($scheme == 'https') {
+            $url = str_replace('http://', 'https://', $url);
+        }
+
+        return $url;
     }
 }
