@@ -8,7 +8,6 @@
 
 namespace Bigyouth\BigyouthImageResizerBundle\Services;
 
-use Bigyouth\CoreBundle\Services\BaseService;
 use Bigyouth\BigyouthImageResizerBundle\Helper\Helper;
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
 use Liip\ImagineBundle\Imagine\Data\DataManager;
@@ -19,7 +18,7 @@ use Liip\ImagineBundle\Imagine\Filter\FilterManager;
  *
  * @package BigyouthBackBundle\Services
  */
-class ImageResizeService extends BaseService
+class ImageResizeService
 {
 
     /**
@@ -36,6 +35,14 @@ class ImageResizeService extends BaseService
      * @var FilterManager $filterManager
      */
     protected $filterManager;
+
+
+    public function __construct(CacheManager $cacheManager, DataManager $dataManager, FilterManager $filterManager)
+    {
+        $this->cacheManager = $cacheManager;
+        $this->dataManager = $dataManager;
+        $this->filterManager = $filterManager;
+    }
 
     /**
      * @param string $path

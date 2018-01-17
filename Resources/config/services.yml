@@ -11,10 +11,7 @@ services:
   # SERVICES
   by.resizer:
     class: "%by.resizer.class%"
-    calls:
-      - [ addService, [ cacheManager, "@liip_imagine.cache.manager" ] ]
-      - [ addService, [ dataManager, "@liip_imagine.data.manager" ] ]
-      - [ addService, [ filterManager, "@liip_imagine.filter.manager" ] ]
+    arguments:  ["@liip_imagine.cache.manager", "@liip_imagine.data.manager", "@liip_imagine.filter.manager"]
 
   # TWIG EXTENSIONS
   by.resizer.extension:
