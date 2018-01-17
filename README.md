@@ -1,4 +1,4 @@
-# BigyouthPageCacheBundle
+# BigyouthImageResizerBundle
 
 ## What is it ?
 
