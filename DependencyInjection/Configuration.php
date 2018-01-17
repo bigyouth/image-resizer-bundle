@@ -1,5 +1,4 @@
 <?php
-
 namespace Bigyouth\BigyouthImageResizerBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

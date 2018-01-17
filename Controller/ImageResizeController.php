@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Resize controller
  *

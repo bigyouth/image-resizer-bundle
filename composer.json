@@ -1,7 +1,7 @@
 {
     "name": "bigyouth/image-resizer-bundle",
-    "license": "Bigyouth",
-    "type": "project",
+    "license": "MIT",
+    "type": "symfony-bundle",
     "authors": [
         {
             "name": "Alexis Smadja",
@@ -12,12 +12,15 @@
         "php": "^5.3.9|^7.0",
         "liip/imagine-bundle": "^1.8"
     },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0"
+    },
     "autoload": {
         "psr-0": {
           "Bigyouth\\BigyouthImageResizerBundle": ""
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "target-dir": "Bigyouth/BigyouthImageResizerBundle",
     "extra": {
         "branch-alias": {

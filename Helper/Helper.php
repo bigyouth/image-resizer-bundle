@@ -1,5 +1,4 @@
 <?php
-
 namespace Bigyouth\BigyouthImageResizerBundle\Helper;
 
 class Helper
