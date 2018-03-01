@@ -1,5 +1,4 @@
 <?php
-
 namespace Bigyouth\BigyouthImageResizerBundle\Twig\Extension;
 
 use Bigyouth\BigyouthImageResizerBundle\Helper\Helper;
