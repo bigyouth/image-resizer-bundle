@@ -21,7 +21,7 @@
     "target-dir": "Bigyouth/BigyouthImageResizerBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "master"
+            "dev-master": "1.x-dev"
         }
     }
 }
