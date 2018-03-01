@@ -15,7 +15,7 @@ This bundle gives you a simple way to generate resized images (using LiipImagine
 
 Download composer at https://getcomposer.org/download/
 
-    composer require bigyouth/image-resizer-bundle 0.1.*
+    composer require bigyouth/image-resizer-bundle 1.0.*
 
 ### Register the bundle
 
